@@ -1,0 +1,14 @@
+uuid: a1812044-c29c-4a04-9a0c-059147023d2c
+name: 'Drupal graphql vuejs example'
+mail: hi@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
