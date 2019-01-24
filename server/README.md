@@ -4,7 +4,17 @@ in the /server folder
 
 docker-compose up -d
 
-docker exec -it my_drupal8_project_php bash
+docker exec -it graphql_vuejs_drupal_server_php bash
+
+Next from the graphql_vuejs_drupal_server_php container:
+
+composer install
+
+../vendor/bin/drush site:install --existing-config --db-url=mysql://drupal:drupal@mariadb:3306/drupal
+
+../vendor/bin/drush cr
+
+
 
 # Composer tips
 
