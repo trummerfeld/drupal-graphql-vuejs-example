@@ -11,6 +11,7 @@ module:
   datetime: 0
   dblog: 0
   devel: 0
+  drupalup_create_content: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
