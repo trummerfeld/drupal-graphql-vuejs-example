@@ -1,0 +1,19 @@
+uuid: fa016e50-3dcd-491c-b428-977967363dfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text
+    - node.type.news
+id: node.news.field_text
+field_name: field_text
+entity_type: node
+bundle: news
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
