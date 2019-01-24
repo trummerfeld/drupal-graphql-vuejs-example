@@ -69,3 +69,12 @@ the response of which would be something like this:
   }
 }
 ```
+
+## The graphiql interface, where you could test your queries logged in to drupal is:
+(first loggin to Drupal http://drupal.docker.localhost:8000/user/login)
+
+http://drupal.docker.localhost:8000/graphql/explorer
+
+And voyager for a full view.
+http://drupal.docker.localhost:8000/graphql/voyager
+
