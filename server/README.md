@@ -4,16 +4,11 @@ in the /server folder
 
 docker-compose up -d
 
-docker exec -it graphql_vuejs_drupal_server_php bash
+// To install Drupal.
 
-Next from the graphql_vuejs_drupal_server_php container:
+docker exec -it graphql_vuejs_drupal_server_php bash ./scripts/drupal_install.sh
 
-composer install
-
-../vendor/bin/drush site:install --existing-config --db-url=mysql://drupal:drupal@mariadb:3306/drupal
-
-../vendor/bin/drush cr
-
+// To update composer install + config import + drush updb
 
 
 # Composer tips
