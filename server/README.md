@@ -70,6 +70,26 @@ the response of which would be something like this:
 }
 ```
 
+## Mutation:
+The mutation query:
+```
+mutation createArticle($input:NodeInput!) {
+  createNode(input: $input) {
+    entity{
+      entityId
+    }
+    errors
+    violations{
+      message
+    }
+  }
+}
+```
+with imput:
+```
+{"input": {"title": "New news entry.", "field_text": "Test news text."}}
+```
+
 ## The graphiql interface, where you could test your queries logged in to drupal is:
 (first loggin to Drupal http://drupal.docker.localhost:8000/user/login)
 
@@ -77,4 +97,3 @@ http://drupal.docker.localhost:8000/graphql/explorer
 
 And voyager for a full view.
 http://drupal.docker.localhost:8000/graphql/voyager
-
