@@ -1,0 +1,61 @@
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<div id="app">
+    <section v-if="errored">
+        <p>Oops..</p>
+    </section>
+
+    <section v-else>
+        <div v-if="loading">Loading...</div>
+
+            <ol>
+                <post-item
+                    v-for="item in post"
+                    v-bind:key="item.id"
+                    v-bind:title="item.title">
+                </post-item>
+            </ol>
+
+    </section>
+</div>
+
+<script>
+    var apiUrl = 'https://jsonplaceholder.typicode.com/posts'
+    Vue.component('post-item', {
+        props: ['title'],
+        template: '<li> {{ title | truncateTitle }} </li>'
+    })
+    
+    var app = new Vue({
+        el: '#app',
+        data () {
+            return {
+            post: null,
+            loading: true,
+            errored: false
+            }
+        },
+        mounted () {
+            this.fetchPosts()
+        },
+        filters: {
+            truncateTitle (value) {
+                return value.substring(0, 50)
+            }
+        },
+        methods: {
+            async fetchPosts () {
+                await fetch(apiUrl)
+                // retrieve data and transform to json + assigning it
+                .then((response) => response.json())
+                .then((responseJson) => this.post = responseJson)
+                // catch errors if API is not responding or connection is lost
+                .catch(error => {
+                    console.log(error)
+                    this.errored = true
+                })
+                .finally(() => this.loading = false)
+            }
+        }
+    })
+</script>
