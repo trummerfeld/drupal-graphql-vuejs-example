@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- 1 -->
+    <b-container>
     <h4 v-if="loading">Loading...</h4>
     <b-card-group deck>
     <news-item
@@ -9,6 +9,7 @@
       :link="link">
     </news-item>
     </b-card-group>
+    </b-container>
   </div>
 </template>
 

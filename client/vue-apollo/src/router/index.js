@@ -1,15 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import CreateNews from '../components/CreateNews'
+import NewsList from '../components/NewsList'
 
 Vue.use(Router)
 
+/* eslint-disable */ 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      component: NewsList
+    },
+    {
+      path: '/create',
+      component: CreateNews
     }
-  ]
+  ],
+  mode: 'history'
 })

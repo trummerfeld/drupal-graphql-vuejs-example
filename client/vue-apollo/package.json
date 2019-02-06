@@ -11,8 +11,14 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "apollo-cache-inmemory": "^1.4.2",
+    "apollo-client": "^2.4.12",
+    "apollo-link-http": "^1.5.11",
     "bootstrap-vue": "^2.0.0-rc.11",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.1",
     "vue": "^2.5.2",
+    "vue-apollo": "^3.0.0-beta.28",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

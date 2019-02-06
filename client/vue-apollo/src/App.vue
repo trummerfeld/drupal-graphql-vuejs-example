@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <news-list></news-list>
+    <app-header></app-header>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import NewsList from './components/NewsList'
+  import AppHeader from './components/AppHeader'
 
   export default {
     name: 'app',
     components: {
-      NewsList
+      AppHeader
     }
   }
 </script>
