@@ -31,13 +31,9 @@
                 variables: {
                     input: {title, field_text}
                 },
-                update: (store, { data: { createNews } }) => {
-                    const data = store.readQuery({
-                        query: ALL_NEWS_QUERY
-                    })
-                    // data.nodeQuery.entities.push(createNews)
-                    store.writeQuery({ query: ALL_NEWS_QUERY, data })
-                }
+                refetchQueries: [{
+                  query: ALL_NEWS_QUERY
+                  }],
                 }).then((data) => {
                 this.$router.push({path: '/'})
                 }).catch((error) => {
